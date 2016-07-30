@@ -34,12 +34,8 @@ if($data_title == '') {
 }
 
 //3) Определяем вывод элементов в параметрах сниппета:
-if($element == "title") {
-	return $data_title;
-}
-if($element == "description") {
-	return $data_description;
-}
-if($element == "image") {
-	return $data_image;
+switch ($element) {
+	case "title": return $data_title;
+	case "description": return $data_description;
+	case "image": return $data_image;
 }
