@@ -16,7 +16,7 @@ $arr_migx = $modx->fromJSON($migx);
 foreach($arr_migx as $arr_migx_set) {
 	if($arr_migx_set['url'] == $utp) {
 		
-		//1) Наполняем значения из TV Migx [В квадратных скобках имена полей из MIGX TV]:
+		//1) Наполняем значения из TV MIGX [В квадратных скобках имена полей из MIGX TV]:
 		$data_title = $arr_migx_set['title'];
 		$data_description = $arr_migx_set['description'];
 		$data_image = MIGXImgThumb($arr_migx_set['image'], 250, 250);
