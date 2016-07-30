@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<h1>Пример</h1>
+
+<!-- Параметры MIGX поля utp -->
+<h3>Вкладки формы:</h3>
+<pre>
+[
+{"caption":"Информация", "fields": [
+    {"field":"title","caption":"Заголовок ЛП"},
+    {"field":"url","caption":"Параметр URL"},
+    {"field":"description","caption":"Описание ЛП","inputTVtype":"textarea"}
+]},
+{"caption":"Изображение", "fields":[
+    {"field":"image","caption":"Изображение","inputTV":"image"}
+]}
+]
+</pre>
+
+<h3>Разметка колонок:</h3>
+<pre>
+[
+{"header": "Параметр URL", "width": "160", "sortable": "true", "dataIndex": "url"},
+{"header": "Заголовок ЛП", "width": "160", "sortable": "true", "dataIndex": "title"},
+{"header": "Изображение", "width": "50", "sortable": "false", "dataIndex": "image","renderer": "this.renderImage"}
+]
+</pre>
+
+<h3>Пример вывода УТП:</h3>
+<h1>[[utp? &element=`title`]]</h1>
+<p>[[utp? &element=`description`]]</p>
+<p><img src="[[utp? &element=`image`]]" alt="[[utp? &text=`title`]]"></p>
